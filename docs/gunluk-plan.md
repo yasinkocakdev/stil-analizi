@@ -1,5 +1,7 @@
 # Günlük Geliştirme Planı
 
+> **Beklemede (2026-11-07):** Proje, 6 aylık C# planı tamamlandıktan sonra bu plandan devam edecek. O zamana kadar ana proje C# planındaki uygulamadır.
+
 Proje, 6 aylık C# planının yanında günde yaklaşık **2 saatle** ilerler. Her gün küçük ama gerçek bir adım atılır ve bir commit'le kaydedilir. Plan her ayın başında, o ayın konularına göre yenilenir.
 
 Bir adım, C# planında henüz gelmediğin bir konuyu gerektiriyorsa yerini bir sonraki adımla değiştir. Asıl iş C# planıdır.
