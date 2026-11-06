@@ -1,41 +1,44 @@
 # stil-analizi
 
-Açık bir Instagram hesabındaki post ve highlight'lardan **kıyafet stilini** çıkaran, sonucu alışveriş listesi ve kombin önerilerine dönüştüren kişisel bir araç.
+Kıyafet fotoğraflarından **stil profili** çıkaran, bunu alışveriş listesi ve kombin önerilerine dönüştüren, kendi bilgisayarında çalışan bir C# uygulaması.
 
-> **Durum:** Taslak aşamasında. Tasarım kararları ve açık sorular: [docs/tasarim-taslagi.md](docs/tasarim-taslagi.md)
+> **Durum:** Geliştirme aşamasında. 6 aylık C# öğrenme planımın yanında gün gün büyüyen bir proje.
 
-## Ne yapacak?
+## Hangi problemi çözüyor?
 
-1. Instagram profil linkini alır.
-2. Postları ve highlight'ları indirir, videolardan kare çıkarır.
-3. Her görseldeki kıyafetleri analiz eder: parça, renk, kesim, görünen marka.
-4. Bulunan parça ve markaları internette araştırır: benzer ürünler, fiyatlar, mağazalar.
-5. Lokal bir web sayfası üretir: stil profili, alışveriş listesi, kombin önerileri.
+Beğendiğin bir tarzı (bir hesabın paylaşımlarını, kaydettiğin fotoğrafları) incelemek için yüzlerce fotoğrafa tek tek bakmak gerekir. stil-analizi bu fotoğrafları analiz eder ve şunları çıkarır:
 
-## Planlanan kullanım
-
-Claude Code içinde çalışan bir komut olarak tasarlanıyor:
-
-```
-/stil-analizi https://www.instagram.com/<kullanici-adi>/
-```
+- **Stil profili:** Renk paleti, en sık giyilen parçalar, görünen markalar, tekrar eden kombin formülleri.
+- **Alışveriş listesi:** Bu tarzı yakalamak için alınabilecek parçalar.
+- **Kombin önerileri.**
 
 ## İlkeler
 
-- **Sadece kıyafet:** Yüz tanıma, konum ya da kişisel bilgi toplama yok. İnternet araştırması yalnızca ürün ve markalar için yapılır.
-- **İndirilen medya repoya girmez:** `data/` ve `output/` klasörleri `.gitignore` içinde.
-- **Şifre kodda tutulmaz:** Instagram girişini kullanıcı terminalde kendisi yapar.
+- **Lokal ve ücretsiz:** Analiz varsayılan olarak bilgisayarındaki bir yapay zekâ modeliyle (Ollama) yapılır. Fotoğrafların hiçbir yere gönderilmez.
+- **İsteğe bağlı yüksek kalite modu:** İstersen kendi API anahtarını girip daha güçlü bir model kullanabilirsin.
+- **Sadece kıyafet:** Yüz tanıma, kimlik ya da konum bilgisi yok.
+- **Kurulumsuz:** Hedef, çift tıklayınca açılan bir program.
 
-> **Uyarı:** Instagram'dan otomatik indirme, platformun kullanım koşullarına aykırıdır ve hesabın kısıtlanmasına yol açabilir. Sorumluluk aracı çalıştıran kullanıcıdadır.
+## Teknoloji
+
+.NET 10 · C# 14 · Blazor · EF Core + SQLite · Ollama · xUnit · GitHub Actions
 
 ## Yol haritası
 
-Gün gün ayrıntılı plan: [docs/gunluk-plan.md](docs/gunluk-plan.md)
+- [x] Fikir ve tasarım ([docs/tasarim-taslagi.md](docs/tasarim-taslagi.md))
+- [ ] 1. ay: Konsol uygulaması, elle yazılmış veriden stil istatistiği
+- [ ] 2. ay: Çekirdek kütüphane, modeller, testler
+- [ ] 3. ay: Lokal yapay zekâyla gerçek fotoğraf analizi
+- [ ] 4. ay: Sürükle bırak arayüz ve rapor ekranı
+- [ ] 5. ay: Yüksek kalite modu ve güvenlik
+- [ ] 6. ay: Windows ve macOS için indirilebilir sürüm
 
-- [x] Fikir ve ilk kararlar
-- [ ] Tasarımın tamamlanması
-- [ ] İndirme ve videodan kare çıkarma
-- [ ] Görsel analizi
-- [ ] Ürün araştırması
-- [ ] Web raporu
-- [ ] PDF çıktısı (gerekirse)
+Gün gün plan: [docs/gunluk-plan.md](docs/gunluk-plan.md)
+
+## Nasıl çalıştırılır?
+
+İlk sürüm hazır olduğunda burada anlatılacak.
+
+## Ne öğrendim?
+
+Her ayın sonunda buraya kısa notlar eklenecek.
