@@ -1,0 +1,17 @@
+# İndirilen medya ve analiz çıktıları: başkasına ait fotoğraflar asla GitHub'a gitmez
+data/
+output/
+
+# Instagram oturum dosyaları
+session-*
+
+# Gizli ayarlar
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# macOS
+.DS_Store
